@@ -421,7 +421,7 @@ section {
 .contact .info p {
   font-size: 17px;
 }
-.contact .info a{
+.contact .info a {
   text-decoration: none;
 }
 
@@ -538,7 +538,6 @@ section {
   .main-left div {
     display: block;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -569,7 +568,8 @@ section {
     margin-left: 5px;
   }
   .main {
-    background: url(./shen9.jpg) no-repeat;
+    /* background: url(./shen9.jpg) no-repeat; */
+    background-position: 73%;
   }
 }
 @media (max-width: 365px) {
