@@ -16,7 +16,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 200px;
+  padding: 5px 120px;
   z-index: 99999;
 }
 
@@ -40,6 +40,9 @@ header nav {
   margin-left: 20px;
   background-color: #3a6cf4;
   border-radius: 10px;
+}
+.bars{
+  display: none;
 }
 
 section {
@@ -156,14 +159,35 @@ section {
 .main-left h3 p {
   font-size: 16px;
 }
+/* education */
 
-/* .cards{
-    background-image: url(./copy4.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-
-} */
+.education{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #333; */
+}
+.edu-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+}
+.education .edu-card{
+  background-color: #ebe8e8;
+  width: 50%;
+  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 15px;
+  transition: 0.7s ease;
+  max-height: fit-content;
+}
+.education .edu-card h2,h4{
+  margin: 10px 0;
+}
 
 .title {
   display: flex;
@@ -453,6 +477,7 @@ section {
 
   .navigation a {
     padding-left: 10px;
+    font-size: 14px;
   }
 
   .title {
@@ -464,15 +489,6 @@ section {
   }
 }
 
-/* @media (max-width: 992px) {
-  .main-left {
-    display: none;
-  }
-  .right-main{
-    max-width: 600px;
-  }
-
-} */
 
 @media (max-width: 767px) {
   body {
@@ -487,22 +503,37 @@ section {
     background-color: #fff;
     width: 40%;
   }
-
-  header {
+  .navigation{
+    display: none;
+  }
+  .bars{
+    display: inline-block;
+  
+  }
+  .navigation.open{
+    display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    padding: 10px ;
+    background-color: #222;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    /* height: 100vh; */
+    
   }
-
-  .logo {
+  .navigation.open a{
     margin-bottom: 20px;
+    background-color: inherit;
+    width: fit-content;
+    align-self: center;
   }
-
-  .navigation a {
-    color: #cfcdcd;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 700;
-    padding: 5px 10px;
-    margin-left: 5px;
+  .navigation.open .active, a:hover{
+    border-bottom: 1px solid #0a49f6;
+    
   }
   .main-left h3 {
     background-color: #f0f0f0;
@@ -538,6 +569,13 @@ section {
   .main-left div {
     display: block;
   }
+  .edu-content{
+    flex-direction: column;
+    text-align: center;
+  }
+  .edu-card{
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -550,34 +588,11 @@ section {
     margin-bottom: 50px;
     font-size: 15px;
   }
+ 
 
-  header {
-    flex-direction: column;
-  }
 
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  .navigation a {
-    color: #cfcdcd;
-    text-decoration: none;
-    font-size: 0.6em;
-    font-weight: 700;
-    padding: 5px 10px;
-    margin-left: 5px;
-  }
   .main {
     background-position: 73%;
   }
 }
-@media (max-width: 365px) {
-  .navigation a {
-    color: #cfcdcd;
-    text-decoration: none;
-    font-size: 0.4em;
-    font-weight: 700;
-    padding: 5px 10px;
-    margin-left: 5px;
-  }
-}
+
